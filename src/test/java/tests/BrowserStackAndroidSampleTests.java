@@ -1,19 +1,16 @@
 package tests;
 
-        import java.net.URL;
-        import java.util.List;
-        import java.util.function.Function;
-        import java.net.MalformedURLException;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-        import io.appium.java_client.MobileBy;
-        import io.appium.java_client.android.AndroidDriver;
-        import io.appium.java_client.android.AndroidElement;
-
-        import org.junit.jupiter.api.Test;
-        import org.openqa.selenium.support.ui.ExpectedConditions;
-        import org.openqa.selenium.support.ui.WebDriverWait;
-        import org.openqa.selenium.WebDriver;
-        import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
 
 public class BrowserStackAndroidSampleTests {
 
@@ -58,7 +55,7 @@ public class BrowserStackAndroidSampleTests {
         Thread.sleep(5000);
         List<AndroidElement> allProductsName = driver.findElementsByClassName(
                 "android.widget.TextView");
-        assert(allProductsName.size() > 0);
+        assert (allProductsName.size() > 0);
 
 
         // Invoke driver.quit() after the test is done to indicate that the test is completed.
